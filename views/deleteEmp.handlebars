@@ -1,0 +1,28 @@
+<div class="container mt-5" >
+<table class="table table-hover container">
+  <thead>
+    <tr>
+      <th scope="col"class="table-dark">Name</th>
+      <th scope="col"class="table-dark">Email</th>
+      <th scope="col"class="table-dark">Phone</th>
+      <th scope="col"class="table-dark">City</th>
+      <th scope="col"class="table-dark">Delete</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each list}}
+    <tr class="table-active">
+      <td scope="row" class="table-info">{{name}}</td>
+      <td class="table-danger">{{email}}</td>
+      <td class="table-success">{{phone}}</td>
+      <td class="table-danger">{{city}}</td>
+     
+      <td>
+        <a href="final-delete/{{this._id}}" class="btn btn-danger rounded">Delete</a>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+<center> <a href="/emp" class="btn btn-danger mt-3 rounded ">Home</a></center>
+</div>
