@@ -15,9 +15,9 @@ app.engine('handlebars', engine({
 app.set('view engine', 'handlebars');
 app.set('views', './views');
 
-// app.get('/', (req, res) => {
-//     res.render('home');
-// });
+app.get('/', (req, res) => {
+    res.render('home');
+});
 app.use(express.urlencoded({ extended: true })); 
 app.use(express.json());
 app.use('/emp',require('./controllers/routes'))
